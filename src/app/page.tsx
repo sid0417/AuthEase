@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Loading from "./Loading/page";
+import Loading from "./Loading";
 
 export default function ProfilePage() {
   const [id, setId] = useState<string | null>(
@@ -47,7 +47,7 @@ export default function ProfilePage() {
     if (!id) getUserData();
   }, [id]);
 
-  if (loading) return <Loading value="Processing" />;
+  if (loading) return <Loading />;
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-black to-[#1a1f38] text-white px-4">

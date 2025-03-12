@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
-import Loading from "@/app/Loading/page";
+import Loading from "../../Loading"
 export default function UserProfile() {
   const [data, setData] = useState<{ email?: string; username?: string }>({});
   const [loading, setLoading] = useState(false);
@@ -24,7 +24,7 @@ export default function UserProfile() {
     getUserData();
   }, []);
 
-  if (loading) return <Loading value="Processing" />;
+  if (loading) return <Loading />;
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-black to-[#1a1f38] text-white px-4">

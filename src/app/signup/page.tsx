@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast from "react-hot-toast";
-import Loading from "../Loading/page"; // Import Loading Component
+import Loading from "../Loading" // Import Loading Component
 
 export default function Signup() {
   const router = useRouter();
@@ -41,7 +41,7 @@ export default function Signup() {
 
   // Show the Loading component when signing up
   if (loading) {
-    return <Loading value="Processing"/>;
+    return <Loading />;
   }
 
   return (

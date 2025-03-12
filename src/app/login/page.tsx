@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast from "react-hot-toast";
-import Loading from "../Loading/page";
+import Loading from "../Loading"
 
 export default function Login() {
   const router = useRouter();
@@ -37,7 +37,7 @@ export default function Login() {
   }, [user]);
 
   if (loading) {
-    return <Loading value="Logging in" />;
+    return <Loading  />;
   }
 
   return (
